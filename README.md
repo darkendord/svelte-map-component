@@ -1,8 +1,11 @@
-# create-svelte
+# Important notes.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This project is part of a job application process and was build mainly on Svelte, TailWind and CSS.
+Here I implement a map UI which dynamically shows the location of the componets on the left of the scree, reprecenting realstate rentals.
 
-## Creating a project
+The locations pinned on the map are clickable and popup the realstate info, based on the data passed between components trough Svelte store
+
+## To the hiring team:
 
 If you're seeing this, you've probably already done this step. Congrats!
 

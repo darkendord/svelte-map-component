@@ -386,7 +386,7 @@ console.log(arrData)
     rel="noopener noreferrer nofollow"
     target="listing_{row.id}"
     aria-labelledby="title_{row.id}"
-    href=""
+    href="/#"
     class=""
   >
     <div class="panel overflow-hidden rounded-lg border bg-white">
