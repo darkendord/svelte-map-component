@@ -361,33 +361,32 @@
     "longitude": 12.60928
   }
 ];
-
-//href="/listing/{row.id}"
-
   import { Img } from "flowbite-svelte";
-  import {latitudeStore, longitudeStore, locationArray} from "../../stores/mapStore"
+  import {locationArr} from "../../store";
 
 
+  /**
+	 * @type {{ x: number; y: number; }[]}
+	 */
+  let arrData = [];
 
+  // @ts-ignore
+  locationArr.set(tableData)
 
+// @ts-ignore
+const setVal = ()=> locationArr.update((val)=> arrData = val);
+setVal();
 
-  
-
+console.log(arrData)
 </script>
 
-
-
-
-
-
 {#each Object.values(tableData) as row}
-
-<div>
+<div class="">
   <a
     rel="noopener noreferrer nofollow"
     target="listing_{row.id}"
     aria-labelledby="title_{row.id}"
-
+    href=""
     class=""
   >
     <div class="panel overflow-hidden rounded-lg border bg-white">
@@ -414,7 +413,7 @@
     </div>
   </a>
 </div>
-{/each}
+  {/each}
 
 <style>
   .panel {

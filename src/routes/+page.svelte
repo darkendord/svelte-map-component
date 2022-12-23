@@ -1,11 +1,9 @@
 <script>
     import Grid from "$lib/Components/Grid.svelte";
-	import MapComponent from "$lib/Components/MapComponent.svelte";
-
+    import MapComponent from "$lib/Components/MapComponent.svelte";
+    
   </script>
   
-
-
   <svelte:head>
     <title>Listings</title>
   </svelte:head>
@@ -16,9 +14,10 @@
     </article>
   
     <div class="sidebar">
-      <MapComponent/>
+      <MapComponent />
     </div></div>
   
+    
   <style>
     *,
     *:before,
@@ -57,13 +56,11 @@
       grid-gap: 16px;
     }
   
-    @media (max-width: 1100px) {
+
+    
+    @media (max-width: 700px) {
       .wrapper {
         grid-template-columns: 1fr;
-      }
-  
-      .sidebar {
-        display: none;
       }
   
       .content {
@@ -71,6 +68,13 @@
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-auto-rows: minmax(300px, auto);
       }
+    }
+
+    @media (max-width: 648px){
+      .sidebar {
+        display: none;
+      }
+
     }
   
     @supports (display: grid) {
